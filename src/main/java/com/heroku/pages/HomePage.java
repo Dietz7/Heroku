@@ -5,6 +5,7 @@ import com.heroku.pages.alertsFrameExamples.AlertsPage;
 import com.heroku.pages.alertsFrameExamples.BrowserWindowsPage;
 import com.heroku.pages.alertsFrameExamples.IframePage;
 import com.heroku.pages.dropList.DropListPage;
+import com.heroku.pages.slider.SliderPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,5 +46,11 @@ public class HomePage extends BasePage {
     public DropListPage navigateToDropDown() {
         click(dropDown);
         return new DropListPage(driver);
+    }
+
+    
+
+    public SliderPage navigateToHorizontalSlider() {
+        return new SliderPage(driver);
     }
 }

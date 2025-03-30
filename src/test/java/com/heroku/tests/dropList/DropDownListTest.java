@@ -15,15 +15,10 @@ public class DropDownListTest extends TestBase {
     }
 
     @Test
-    public void selectOption1Test(){
-        new DropListPage(driver).selectOption1("1")
-                .verifyNumber("1");
-    }
-
-    @Test
-    public void selectOption2Test(){
-        new DropListPage(driver).selectOption2("2")
+    public void selectOptionTest(){
+        new DropListPage(driver).selectOptionByValue("2")
                 .verifyNumber("2");
-
     }
+
+
 }

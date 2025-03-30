@@ -69,4 +69,8 @@ public class BasePage {
             throw new RuntimeException(e);
         }
     }
+
+    public String getValue(WebElement element, String value) {
+        return element.getDomAttribute(value);
+    }
 }

@@ -15,7 +15,7 @@ public class SliderPage extends BasePage {
     @FindBy(css="input[type='range']")
     WebElement sliderContainer;
 
-    @FindBy(css = "input[type='range']")
+    @FindBy(id="range")
     WebElement sliderValue;
     public SliderPage moveSliderToHorizontalId() {
         pause(100);
@@ -24,7 +24,7 @@ public class SliderPage extends BasePage {
     }
 
     public SliderPage verifySliderValue(String number) {
-        String actualValue = sliderValue.getAttribute("value");
+        String actualValue = sliderValue.getText();
         System.out.println("Slider current value: " + actualValue);
         Assertions.assertEquals(number, actualValue);
         return this;

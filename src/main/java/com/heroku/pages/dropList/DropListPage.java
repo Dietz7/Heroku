@@ -32,18 +32,11 @@ public class DropListPage extends BasePage {
         return this;
     }
 
-    public DropListPage selectOption1(String number) {
-        return selectOptionByValue(number);
-    }
-
-    public DropListPage selectOption2(String number) {
-        return selectOptionByValue(number);
-    }
-
     public DropListPage verifyNumber(String expValue) {
         Select select = new Select(dropDown);
-        String selectedValue = select.getFirstSelectedOption().getAttribute("value");
-        Assertions.assertTrue(selectedValue.equals(expValue), expValue + selectedValue);
+        String selectedValue = select.getFirstSelectedOption().getAttribute("value"); // Use value attribute instead of text
+        Assertions.assertEquals(expValue, selectedValue, "Selected value does not match the expected value attribute.");
         return this;
     }
+
 }

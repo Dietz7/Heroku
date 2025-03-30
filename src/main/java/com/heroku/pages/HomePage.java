@@ -6,6 +6,8 @@ import com.heroku.pages.alertsFrameExamples.BrowserWindowsPage;
 import com.heroku.pages.alertsFrameExamples.IframePage;
 import com.heroku.pages.dropList.DropListPage;
 import com.heroku.pages.elements.ButtonPage;
+import com.heroku.pages.elements.ImagesPage;
+import com.heroku.pages.elements.LinksPage;
 import com.heroku.pages.forms.PracticeFormPage;
 import com.heroku.pages.interactions.DragandDropPage;
 import com.heroku.pages.sliderExample.SliderPage;
@@ -82,5 +84,19 @@ public class HomePage extends BasePage {
         return new PracticeFormPage(driver);
     }
 
+    @FindBy(css="[href='/broken_images']")
+    WebElement brokenImages;
 
+    public ImagesPage navigateToBrokenImages() {
+        click(brokenImages);
+        return new ImagesPage(driver);
+    }
+
+    @FindBy(css="[href='/status_codes']")
+    WebElement statusCodes;
+
+    public LinksPage navigateToStatusCodes() {
+        click(statusCodes);
+        return new LinksPage(driver);
+    }
 }

@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 
@@ -32,6 +35,34 @@ public class LinksPage extends BasePage {
     }
 
     public LinksPage verifyBrokenLinks() {
+        for (WebElement element : allLinks) {
+            String url = element.getDomAttribute("href");
+
+            if (url == null || url.isEmpty()) {
+                System.out.println("URL is empty or null");
+                continue;
+            }
+
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+                connection.setRequestMethod("HEAD");
+                connection.connect();
+
+                int responseCode = connection.getResponseCode();
+                if (responseCode >= 200 && responseCode < 400) {
+                    System.out.println(url + " is valid with response code: " + responseCode);
+                } else {
+                    System.out.println(url + " is broken with response code: " + responseCode);
+                }
+            } catch (IOException e) {
+                System.out.println("Exception while checking URL: " + url);
+                e.printStackTrace();
+            }
+        }
+        return this;
+    }
+
+    /*public LinksPage verifyBrokenLinks() {
 
         for (int i = 0; i < allLinks.size(); i++) {
             WebElement element = allLinks.get(i);
@@ -43,5 +74,5 @@ public class LinksPage extends BasePage {
             }
         }
         return this;
-    }
+    }*/
 }

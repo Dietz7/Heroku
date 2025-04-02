@@ -4,6 +4,7 @@ import com.heroku.pages.HomePage;
 import com.heroku.pages.dropList.DropListPage;
 import com.heroku.tests.TestBase;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class DropDownListTest extends TestBase {
@@ -15,6 +16,7 @@ public class DropDownListTest extends TestBase {
     }
 
     @Test
+    @Tag("smoke")
     public void selectOptionTest(){
         new DropListPage(driver).selectOptionByValue("2")
                 .verifyNumber("2");

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.heroku.tests.alertsFrameExamples.BrowserWindowsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.397 s -- in com.heroku.tests.alertsFrameExamples.BrowserWindowsTest

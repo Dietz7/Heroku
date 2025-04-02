@@ -1,0 +1,11 @@
+com\heroku\tests\alertsFrameExamples\IframesTests.class
+com\heroku\tests\dropList\DropDownListTest.class
+com\heroku\tests\interactions\DragAndDropTests.class
+com\heroku\tests\elements\ButtonTests.class
+com\heroku\tests\elements\ImagesTests.class
+com\heroku\tests\alertsFrameExamples\BrowserWindowsTest.class
+com\heroku\tests\alertsFrameExamples\AlertsTests.class
+com\heroku\tests\forms\PracticeFormTests.class
+com\heroku\tests\sliderExample\SliderTests.class
+com\heroku\tests\TestBase.class
+com\heroku\tests\elements\LinksTests.class

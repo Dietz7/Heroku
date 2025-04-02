@@ -1,0 +1,14 @@
+com\heroku\pages\alertsFrameExamples\AlertsPage.class
+com\heroku\pages\elements\ButtonPage.class
+com\heroku\pages\interactions\DragandDropPage.class
+com\heroku\pages\alertsFrameExamples\BrowserWindowsPage.class
+com\heroku\pages\elements\ImagesPage.class
+com\heroku\config\BasePage.class
+com\heroku\pages\HomePage.class
+com\heroku\pages\dropList\DropListPage.class
+com\heroku\pages\alertsFrameExamples\IframePage.class
+com\heroku\pages\forms\PracticeFormPage.class
+com\heroku\pages\sliderExample\SliderPage.class
+com\heroku\config\ApplicationManager.class
+com\heroku\pages\elements\TextBoxPage.class
+com\heroku\pages\elements\LinksPage.class

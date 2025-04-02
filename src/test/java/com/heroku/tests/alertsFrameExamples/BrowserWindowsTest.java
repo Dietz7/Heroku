@@ -4,6 +4,7 @@ import com.heroku.pages.HomePage;
 import com.heroku.pages.alertsFrameExamples.BrowserWindowsPage;
 import com.heroku.tests.TestBase;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class BrowserWindowsTest extends TestBase {
@@ -14,6 +15,7 @@ public class BrowserWindowsTest extends TestBase {
     }
 
     @Test
+    @Tag("smoke")
     public void switchToNewTabTest() {
         new BrowserWindowsPage(driver).switchToNewTab(1)
                 .verifyNewTabTitle("New Window");
